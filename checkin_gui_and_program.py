@@ -109,3 +109,75 @@ class HOTEL_MANGMENT_checkin:
                     self.Text1.insert(INSERT, "mobile number has been inputed""\n")
                     break
                 else:
+                    self.Text1.insert(INSERT, "invalid input ""\n")
+                    break
+
+                def enter(self):
+                    self.name = self.NAME
+                    self.address = self.ADDERESS
+                    self.mobile_no = self.MOBILE
+                    self.no_of_days = int(self.DAYS)
+
+                def tor(self):
+
+                    if self.ch == 1:
+                        self.price = self.price + (2000 * self.no_of_days)
+                        m[0] = 1
+                    elif self.ch == 2:
+                        self.price = self.price + (1500 * self.no_of_days)
+                        m[0] = 2
+                    elif self.ch == 3:
+                        self.price = self.price + (1000 * self.no_of_days)
+                        m[0] = 3
+                    elif self.ch == 4:
+                        self.price = self.price + (1700 * self.no_of_days)
+                        m[0] = 4
+
+                def payment_option(self):
+                    op = self.p
+                    if op == 1:
+                        self.Text1.insert(INSERT, "no discount""\n")
+                    elif op == 2:
+                        self.price = self.price - ((self.price * 10) / 100)
+                        self.Text1.insert(INSERT, "10% discount""\n")
+
+                def bill(self):
+
+                    if m[0] == 1:
+                        a = Delux
+                    elif m[0] == 2:
+                        a = Semi_Delux
+                    elif m[0] == 3:
+                        a = General
+                    elif m[0] == 4:
+                        a = Joint_Room
+
+                    G = []
+                    f2 = open("hotel.dat", "rb")
+                    try:
+                        while True:
+                            s = pickle.load(f2)
+
+                            k = s.room_no
+                            G.append(k)
+                            continue
+
+                    except EOFError:
+                        pass
+
+                    for r in a:
+                        if r not in G:
+                            self.room = r
+                            break
+                        else:
+                            continue
+                    self.room = r
+                    f2.close()
+
+                    details_list.append(self.name)
+                    details_list.append(self.address)
+                    details_list.append(self.mobile_no)
+                    details_list.append(self.room)
+                    details_list.append(self.price)
+
+                    file_save()
