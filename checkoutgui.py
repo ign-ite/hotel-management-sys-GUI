@@ -63,3 +63,50 @@ class New_Toplevel:
                 f = open("hotel.dat", "rb")
                 f1 = open("hote.dat", "ab")
                 n = 0
+                try:
+                    while True:
+                        s = pickle.load(f)
+                        if s.room_no == v:
+                            n = 1
+                            name1 = s.name
+
+                            print(" ")
+                        else:
+                            pickle.dump(s, f1)
+                except EOFError:
+                    if n == 0:
+                        self.Text1.insert(INSERT, "NO GUEST FOUND""\n")
+
+                    elif n == 1:
+
+                        self.Text1.insert(INSERT, "THANK YOU  " + name1.upper() + " FOR VISTING US""\n")
+                    pass
+                f.close()
+                f1.close()
+                os.remove("hotel.dat")
+                os.rename("hote.dat", "hotel.dat")
+
+            else:
+                self.Text1.insert(INSERT, "invalid input please input a valid ROOM NO.""\n")
+
+        root = Tk()
+
+        _bgcolor = '#ffffff'  # X11 color: 'white'
+        _fgcolor = '#000000'  # X11 color: 'black'
+        _compcolor = '#ffffff'  # X11 color: 'white'
+        _ana1color = '#ffffff'  # X11 color: 'white'
+        _ana2color = '#ffffff'  # X11 color: 'white'
+        font10 = "-family {Courier New} -size 10 -weight normal -slant" \
+                 " roman -underline 0 -overstrike 0"
+        font11 = "-family {Segoe UI} -size 23 -weight bold -slant " \
+                 "roman -underline 0 -overstrike 0"
+        font12 = "-family {Segoe UI} -size 24 -weight bold -slant " \
+                 "roman -underline 0 -overstrike 0"
+        font9 = "-family {Segoe UI} -size 9 -weight normal -slant " \
+                "roman -underline 0 -overstrike 0"
+
+        root.geometry("1011x750")
+        root.title("HOTEL MANAGEMENT")
+        root.configure(background="#ffffff")
+        root.configure(highlightbackground="#ffffff")
+        root.configure(highlightcolor="black")
