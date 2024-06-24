@@ -110,3 +110,27 @@ class New_Toplevel:
         root.configure(background="#ffffff")
         root.configure(highlightbackground="#ffffff")
         root.configure(highlightcolor="black")
+
+        self.Frame1 = Frame(root)
+        self.Frame1.place(relx=0.04, rely=0.04, relheight=0.91, relwidth=0.91)
+        self.Frame1.configure(relief=GROOVE)
+        self.Frame1.configure(borderwidth="2")
+        self.Frame1.configure(relief=GROOVE)
+        self.Frame1.configure(background="#ffffff")
+        self.Frame1.configure(highlightbackground="#ffffff")
+        self.Frame1.configure(highlightcolor="black")
+        self.Frame1.configure(width=925)
+
+        self.Label1 = Label(self.Frame1)
+        self.Label1.place(relx=0.14, rely=0.12, height=46, width=442)
+        self.Label1.configure(activebackground="#ffffff")
+        self.Label1.configure(activeforeground="black")
+        self.Label1.configure(background="#ffffff")
+        self.Label1.configure(disabledforeground="#bfbfbf")
+        self.Label1.configure(font=font11)
+        self.Label1.configure(foreground="#000000")
+        self.Label1.configure(highlightbackground="#ffffff")
+        self.Label1.configure(highlightcolor="black")
+        self.Label1.configure(text='''ENTER THE ROOM NO.   :''')
+
+        
