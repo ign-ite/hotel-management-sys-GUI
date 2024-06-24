@@ -48,7 +48,7 @@ def chk_add():
 def chk_mo():
     while True:
         print("\n")
-        mobile_no = input("ENTER MOBILE/PNOHE NO.:")
+        mobile_no = input("ENTER MOBILE/PHONE NO.:")
         if mobile_no.isdigit() == True and len(mobile_no) != 0 and len(mobile_no) == 10:
             return mobile_no
             break
@@ -100,8 +100,8 @@ class save:
         self.no_of_days = int(chk_day())
 
     def tor(self):
-        print("1. Delux")
-        print("2. Semi-Delux")
+        print("1. Deluxe")
+        print("2. Semi-Deluxe")
         print("3. General")
         print("4. Joint Room")
         while True:
