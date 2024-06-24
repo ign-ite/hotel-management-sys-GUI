@@ -64,7 +64,47 @@ class HOTEL_MANAGEMENT:
         self.Frame1.configure(highlightcolor="black")
         self.Frame1.configure(width=925)
 
-      
+        self.Message6 = Message(self.Frame1)
+        self.Message6.place(relx=0.09, rely=0.01, relheight=0.15, relwidth=0.86)
+        self.Message6.configure(background="#d9d9d9")
+        self.Message6.configure(font=font16)
+        self.Message6.configure(foreground="#000000")
+        self.Message6.configure(highlightbackground="#d9d9d9")
+        self.Message6.configure(highlightcolor="black")
+        self.Message6.configure(text='''WELCOME''')
+        self.Message6.configure(width=791)
+
+        self.Button2 = Button(self.Frame1)
+        self.Button2.place(relx=0.18, rely=0.17, height=103, width=566)
+        self.Button2.configure(activebackground="#d9d9d9")
+        self.Button2.configure(activeforeground="#000000")
+        self.Button2.configure(background="#d9d9d9")
+        self.Button2.configure(disabledforeground="#bfbfbf")
+        self.Button2.configure(font=font14)
+        self.Button2.configure(foreground="#000000")
+        self.Button2.configure(highlightbackground="#d9d9d9")
+        self.Button2.configure(highlightcolor="black")
+        self.Button2.configure(pady="0")
+        self.Button2.configure(text='''1.CHECK INN''')
+        self.Button2.configure(width=566)
+        self.Button2.configure(command=click_checkinn)
+
+        self.Button3 = Button(self.Frame1)
+        self.Button3.place(relx=0.18, rely=0.33, height=93, width=566)
+        self.Button3.configure(activebackground="#d9d9d9")
+        self.Button3.configure(activeforeground="#000000")
+        self.Button3.configure(background="#d9d9d9")
+        self.Button3.configure(disabledforeground="#bfbfbf")
+        self.Button3.configure(font=font14)
+        self.Button3.configure(foreground="#000000")
+        self.Button3.configure(highlightbackground="#d9d9d9")
+        self.Button3.configure(highlightcolor="black")
+        self.Button3.configure(pady="0")
+        self.Button3.configure(text='''2.SHOW GUEST LIST''')
+        self.Button3.configure(width=566)
+        self.Button3.configure(command=click_list)
+
+
 
 
 if __name__ == '__main__':
