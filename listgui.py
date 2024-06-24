@@ -22,10 +22,6 @@ def restart_program():
     os.execl(python, python, * sys.argv)
 
 
-
-
-
-
 class save:
     def __init__(self, NAME_PRO, ADDRESS_PRO, MOBILE_NO_PRO, ROOM_NO_PRO, PRICE_PRO):
         self.name=NAME_PRO
@@ -36,7 +32,6 @@ class save:
         print(self.name,self.address,self.mobile_no,self.room_no,self.price)
 
 import sys
-
 
 try:
     from Tkinter import *
@@ -51,14 +46,17 @@ except ImportError:
     py3 = True
 
 
+
+
+
 class HOTEL_MANGMENT_checkin:
     def __init__(self):
         root = Tk()
-        _bgcolor = '#d9d9d9'
-        _fgcolor = '#000000'
-        _compcolor = '#ffffff'
-        _ana1color = '#ffffff'
-        _ana2color = '#ffffff'
+        _bgcolor = '#d9d9d9'  # X11 color: 'gray85'
+        _fgcolor = '#000000'  # X11 color: 'black'
+        _compcolor = '#ffffff' # X11 color: 'white'
+        _ana1color = '#ffffff' # X11 color: 'white'
+        _ana2color = '#ffffff' # X11 color: 'white'
         font11 = "-family {Segoe UI} -size 17 -weight bold -slant "  \
             "roman -underline 0 -overstrike 0"
         font14 = "-family {Times New Roman} -size 16 -weight bold " \
@@ -120,9 +118,11 @@ class HOTEL_MANGMENT_checkin:
         self.Text1.configure(width=314)
         self.Text1.configure(wrap=WORD)
 
+
+
         self.Frame2 = Frame(self.Labelframe1)
         self.Frame2.place(relx=0.51, rely=0.1, relheight=0.86, relwidth=0.47
-                          , y=-31, h=15)
+                , y=-31, h=15)
         self.Frame2.configure(relief=GROOVE)
         self.Frame2.configure(borderwidth="2")
         self.Frame2.configure(relief=GROOVE)
@@ -155,13 +155,15 @@ class HOTEL_MANGMENT_checkin:
         self.Text2.configure(selectforeground="black")
         self.Text2.configure(width=314)
         self.Text2.configure(wrap=WORD)
-        for i in range(0, len(G)):
-            s = str(l2[i])
-            h = str(G[i])
-            self.Text1.insert(INSERT, s + "\n")
-            self.Text2.insert(INSERT, h + "\n")
+        for i in range(0,len(G)):
+            s=str(l2[i])
+            h=str(G[i])
+            self.Text1.insert(INSERT,s+"\n")
+            self.Text2.insert(INSERT,h+"\n")
+
 
         root.mainloop()
+
 
 if __name__ == '__main__':
     f2 = open("hotel.dat", "rb")
@@ -178,4 +180,4 @@ if __name__ == '__main__':
     except EOFError:
         pass
     f2.close()
-    hotel = HOTEL_MANGMENT_checkin()
+    hotel=HOTEL_MANGMENT_checkin()
