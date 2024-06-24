@@ -49,3 +49,48 @@ try:
 except ImportError:
     import tkinter.ttk as ttk
     py3 = True
+
+
+class HOTEL_MANGMENT_checkin:
+    def __init__(self):
+        root = Tk()
+        _bgcolor = '#d9d9d9'  
+        _fgcolor = '#000000'
+        _compcolor = '#ffffff'
+        _ana1color = '#ffffff'
+        _ana2color = '#ffffff'
+        font11 = "-family {Segoe UI} -size 17 -weight bold -slant "  \
+            "roman -underline 0 -overstrike 0"
+        font14 = "-family {Times New Roman} -size 16 -weight bold " \
+                 "-slant roman -underline 0 -overstrike 0"
+
+        root.geometry("780x541+504+123")
+        root.title("HOTEL MANAGEMENT")
+        root.configure(background="#ffffff")
+        root.configure(highlightbackground="#ffffff")
+        root.configure(highlightcolor="black")
+
+
+
+        self.Labelframe1 = LabelFrame(root)
+        self.Labelframe1.place(relx=0.01, rely=0.04, relheight=0.95
+                , relwidth=0.97)
+        self.Labelframe1.configure(relief=GROOVE)
+        self.Labelframe1.configure(font=font11)
+        self.Labelframe1.configure(foreground="black")
+        self.Labelframe1.configure(text='''LIST OF ALL GUEST''')
+        self.Labelframe1.configure(background="#ffffff")
+        self.Labelframe1.configure(highlightbackground="#ffffff")
+        self.Labelframe1.configure(highlightcolor="black")
+        self.Labelframe1.configure(width=760)
+
+        self.Frame1 = Frame(self.Labelframe1)
+        self.Frame1.place(relx=0.03, rely=0.1, relheight=0.86, relwidth=0.47
+                , y=-31, h=15)
+        self.Frame1.configure(relief=GROOVE)
+        self.Frame1.configure(borderwidth="2")
+        self.Frame1.configure(relief=GROOVE)
+        self.Frame1.configure(background="#d9d9d9")
+        self.Frame1.configure(highlightbackground="#ffffff")
+        self.Frame1.configure(highlightcolor="black")
+        self.Frame1.configure(width=355)
